@@ -1,67 +1,58 @@
-# HTML Reference
+should# HTML Reference
 
 
 ## Document
 
+#### `<!DOCTYPE html>`
+This declaration must be the very first thing in the HTML doc, before the `<html>` tag. Technically not an  tag; it is an instruction to the web browser about what version of HTML the page is written in.
+
+#### `<html>`
+Tells the browser that this is an HTML document. It represents the root of the document and is the container for all other HTML elements (except for the `<!DOCTYPE>`).
+
 #### `<title>`
+Shown in the browser tab & search results. Should be unique for every page on the site.
 
-Shown in the browser tab & search results.
-Should be unique for every page on the site.
+#### `<meta>`
+The `<meta>` tag provides metadata about the HTML document. Metadata will not be displayed on the page, but will be machine parseable.
 
-#### `<link href="…" rel="stylesheet">`
+#### `<link>`
+For linking CSS and other resources. The `rel` attribute indicates the type of resource.
 
-For linking CSS and other resources like feeds.
-rel has different values for other resources.
+#### `<style>`
+Used to define style information in an HTML document. Consider attaching a stylesheet instead.
+
+#### `<script>`
+Used to define a client-side script (JavaScript).
+
+#### `<noscript>`
+Defines alternate content for users that have disabled scripts in their browser or have a browser that doesn't support scripts. Can be used in both <head> and <body>. When used inside the <head>: `<noscript>` must contain only `<link>`, `<style>`, and `<meta>` elements. The content inside the `<noscript>` element will be displayed if scripts are not supported, or are disabled in the user's browser.
+
+#### `<body>`
+The `<body>` element contains all the contents of an HTML document.
 
 #### `<header>`
-
-When inside `<body>` it’s the website masthead.
-When inside `<article>` it’s the most important information.
-
-#### `<footer>`
-
-When inside `<body>` it’s the website footer.
-When inside `<article>` it’s the least important information.
+Represents a container for introductory content or a set of navigational links. It typically contains: one or more heading elements, logo or icon, authorship information. You can have several `<header>` elements in one document. An element like `<article>` should have its own header. Note: A `<header>` cannot be placed within a `<footer>`, `<address>` or another `<header>` element.
 
 #### `<main>`
-
 Primary content of the page.
 
-#### `<nav>`
+#### `<footer>`
+When inside `<body>` it’s the website footer. An element like `<article>` should have its own footer.
+Typically contains information about its section, such as who wrote it, links to related documents, copyright data, and the like. Can also contain entire sections representing appendices, indexes, long colophons, verbose license agreements, and other such content.
 
+#### `<nav>`
 Defines a group a navigation links.
 
-#### `<article>`
-
-A piece of content that’s independent.
-Could be removed from this website and still make sense.
-
-#### `<section>`
-
-A group in a series of related content pieces.
-
-#### `<aside>`
-
-Secondary content not required to understand the main content.
-
-*Example: Navigation inside header*
-```html
-<header>
-  <nav>
-    <ul>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Store</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-```
-
-*Example: Main content groups*
 ```html
 <body>
   <header>
-    <nav>…</nav>
+    <nav>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Store</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
@@ -74,43 +65,253 @@ Secondary content not required to understand the main content.
 </body>
 ```
 
+#### `<article>`
+Represents a complete, or self-contained, composition in a document, page, application, or site. This could be a news story, technical article, essay, report, a blog post, comment or other social media post. A general rule is that the article element is appropriate only if the contents would be listed explicitly in the document’s outline. Each article should be identified, typically by including a heading. An article is independent, self-contained content. It should make sense on its own and it should be possible to distribute it independently from the rest of the site.
+
+When article elements are nested, the inner article elements represent articles that are in principle related to the contents of the outer article. For instance, a blog entry on a site could consist of summaries of other blog entries in article elements nested within the article element for the blog entry.
+
+#### `<section>`
+The section element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content. Each section should be identified, typically by including a heading. Examples of sections would be chapters, the tabbed sections in a dialog box, or the numbered sections of a thesis. A Web site’s home page could be split into sections for an introduction, news items, and contact information.
+
+Like articles, a general rule is that the section element is appropriate only if the element’s contents would be listed explicitly in the document’s outline. Authors are encouraged to use the article element instead of the section element when the content is a complete, or self-contained, composition.
+
+#### `<aside>`
+The `<aside>` tag defines some content aside from the content it is placed in. In other words, the aside content should be related to the surrounding content. It can be used for typographical effects like pull quotes or sidebars, for advertising, for groups of nav elements, and for other content that is considered separate from the main content.
+
+#### `<details>`
+The details element specifies additional information that the user can view or hide on demand. It can be used to create an interactive widget that the user can open and close. Any sort of content can be put inside the `<details>` tag. The content of a `<details>` element should not be visible unless the open attribute is set.
+
+#### `<summary>`
+Defines a visible heading for the `<details>` element. The heading can be clicked to view/hide the details.
+
+```html
+<details>
+  <summary>Copyright 1999-2018.</summary>
+  <p> - by Example Co. All Rights Reserved.</p>
+  <p>All content and graphics on this web site are the property of Example Co.</p>
+</details>
+```
+
+#### `<dialog>`
+The dialog element represents a part of an application that a user interacts with to perform a task, for example a dialog box, inspector, or window.
+
+
+## Text
+
+#### `<a>`
+For making hyperlinks. The `href` attribute contains the path.
+
+#### `<h1>`
+The topmost heading in a page or article. On the home page this should be the site’s name. On inside pages this should be the page title.
+
+#### `<h2>, <h3>, <h4>, <h5>, <h6>`
+Content headings, each a sub-heading of the one above.
+
+#### `<p>`
+A generic paragraph of text.
+
+#### `<blockquote>`
+A large, stand alone quote from another source (optionally with a citation which must be within a `footer` or `cite` element).
+
+#### `<cite>`
+A citation for another source, often used with quotations. A person’s name, a URL, a book, a movie title, etc.
+
+```html
+<blockquote>
+  <p>Dinosaurs may be extinct from the face of the planet, but they are alive and well in our imaginations.</p>
+  <footer>— <cite>Steve Miller</cite></footer>
+</blockquote>
+```
+
+#### `<q>`
+A small inline quote embedded within other content.
+
+#### `<em>`
+A string of emphasized, slightly more important text. Screen readers will change their voice for this text.
+
+#### `<strong>`
+A string of highly emphasized, much more important text. Screen readers will change their voice for this text.
+
+#### `<ins>`
+Content that was inserted after the document was published. The `datetime` attribute defines when it was added.
+
+#### `<del>`
+Content that was deleted after the document was published. The `datetime` attribute defines when it was removed.
+
+```html
+<p>Launchpad 39A owned by <del datetime="2014-04-14">NASA</del> <ins datetime="2014-04-14">SpaceX</ins></p>
+```
+
+#### `<abbr>`
+An acronym or abbreviation, like *HTML*, *CSS*, etc. The `title` attribute contains the expanded version, like “Hypertext Markup Language”.
+
+#### `<dfn>`
+Represents the defining instance of a term in HTML. The defining instance is often the first use of a term in a document. The nearest parent of the `<dfn>` tag must also contain the definition/explanation for the term inside `<dfn>`.
+
+```html
+<p><dfn>HTML</dfn> is the standard markup language for creating web pages.</p>
+```
+
+#### `<mark>`
+Used to highlight a piece of text for reference. The keywords in a search results page, the current navigation item.
+
+#### `<i>`
+Defines a span of text in an alternate voice or mood. A technical term, a ship name, a book title, a thought, sarcasm, another language. Terms in languages different from the main text should be annotated with lang attributes:
+
+```html
+<i lang="fr">je ne sais quoi</i>
+```
+
+#### `<b>`
+Defines a span of text to which attention is being drawn for utilitarian purposes like a keyword, a product name in a review, a lead sentence in a paragraph, actionable words in interactive text-driven software. There is no implication of an alternate voice or mood with this element.
+
+#### `<s>`
+Once deprecated this element is now back to represent text that is no longer correct, accurate or relevant. Use the `<del>` tag to define replaced or deleted text.
+
+#### `<u>`
+Represents some text that should be stylistically different from normal text, such as misspelled words or proper nouns in Chinese.  Avoid using the `<u>` element where it could be confused for a hyperlink.
+The HTML 5 specification reminds developers that other elements are almost always more appropriate than `<u>`.
+
+#### `<small>`
+Represents side comments and fine print.
+
+#### `<address>`
+Contact information, email, tel, postal address, etc.
+
+```html
+<address>
+  Jet Propulsion Laboratory
+  <br>4800 Oak Grove Drive
+  <br>Pasadena, California
+  <br>91109
+</address>
+```
+
+
+## Embedded Content
+
+#### `<img>`
+Embeds an image that’s important to the content. The `src` attribute is the path to the image file.
+The `alt` attribute describes the image if it cannot be seen.
+
+#### `<map>`
+Used to define a client-side image-map. An image-map is an image with clickable areas. The required name attribute of the `<map>` element is associated with the `<img>` `usemap` attribute and creates a relationship between the image and the map. The `<map>` element contains a number of `<area>` elements, that define the clickable areas in the image map.
+
+#### `<area>`
+Defines an area inside an image-map. The `<area>` element is always nested inside a `<map>`.
+
+#### `<figure>`
+Embeds annotated images, illustrations, photos, code, etc. Could be moved out of place and would still make sense.
+
+#### `<figcaption>`
+For adding a caption/annotation to the `<figure>`. Must be inside a `<figure>` element—cannot stand alone.
+
+```html
+<figure>
+  <img src="images/dino-small.jpg" alt="">
+  <figcaption>So many dinosaurs I can’t even count!</figcaption>
+</figure>
+```
+
+#### `<picture>`
+The `<picture>` tag gives web developers more flexibility in specifying image resources. The most common use is in responsive designs. Instead of having one image that is scaled up or down based on the viewport width, multiple images can be designed to better fill the browser viewport. See [W3schools](https://www.w3schools.com/tags/tag_picture.asp).
+
+#### `<source>`
+Must be inside `<picture>`, `<video>` or `<audio>` to define the different versions of content.
+For example, in video it gives paths to the MP4 and WEBM formats.
+
+```html
+<picture>
+  <source media="(min-width: 650px)" srcset="img/cat-wide.jpg">
+  <source media="(min-width: 450px)" srcset="img/cat-square.jpg">
+  <img src="img/cat-small.jpg" alt="A fuzzy kitty." style="width:auto;">
+</picture>
+```
+
+#### `<video poster="" autoplay loop muted controls>`
+For embedding movies into a website.
+`poster` is the path to an image that’s displayed before the video plays.
+`autoplay` will hint the video to start automatically.
+`loop` triggers whether the video should repeat or not.
+`muted` can be added to not play sound by default.
+`controls` shows or hides the browser’s player buttons.
+
+#### `<audio autoplay loop muted controls>`
+
+For embedding sounds into a website.
+`autoplay` will hint the audio to start automatically.
+`loop` triggers whether the audio should repeat or not.
+`muted` can be added to not play sound by default.
+`controls` shows or hides the browser’s player buttons.
+
+#### `<track>`
+Specifies text tracks for media elements (<audio> and <video>). It's used to specify subtitles, caption files or other files containing text, that should be visible when the media is playing.
+
+```html
+<video width="320" height="240" controls>
+  <source src="forrest_gump.mp4" type="video/mp4">
+  <source src="forrest_gump.ogg" type="video/ogg">
+  <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+  <track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian">
+</video>
+```
+
+#### `<iframe>`
+The `<iframe>` tag specifies an inline frame which is used to embed another HTML document within the current HTML document. Primarily used to include resources from other domains or subdomains but can be used to include content from the same domain as well. The `<iframe>`'s strength is that the embedded code is 'live' and can communicate with the parent document.
+
+#### `<embed>`
+The `<embed>` element defines a container for an external application or interactive content (typically non-HTML). It's used to embed content for browser plugins. Exceptions to this are SVG and HTML that are handled differently according to the standard.
+
+#### `<object>`
+The `<object>` tag defines an embedded multimedia object (like SVG animations, audio, video, Java applets, ActiveX, PDF, and Flash). You can also use the <object> tag to embed another webpage into your HTML document. You can use the <param> tag to pass parameters to plugins that have been embedded with the <object> tag.
+
+> Note: `<embed>`, `<object>` and `<iframe>` are confusingly similar in functionality... plus you have the fairly new `<video>` and `<audio>`. Think/research before choosing.
+
+#### `<param>`
+Used to define parameters for plugins embedded with an `<object>` element.
+
+#### `<svg>`
+The `<svg>` tag defines a container for SVG graphics. For more information see [W3schools SVG Tutorial](https://www.w3schools.com/graphics/svg_intro.asp)
+
+
+## Scripting
+
+#### `<template>`
+The template element is used to declare fragments of HTML that can be cloned and inserted in the document by script. The `<template>` tag holds its content hidden from the client. The content can be visible and rendered later by using JavaScript. Use the `<template>` tag when you have HTML code you want to use over and over again, but not until you ask for it.
+
+#### `<canvas>`
+The `<canvas>` tag is used to draw graphics, on the fly, via scripting (usually JavaScript). The `<canvas>` tag is only a container for graphics, you use a script to actually draw the graphics.
+
 
 ## Lists
 
 #### `<ul>`
-
 An unordered list—the order of items isn’t important.
 Can only have `<li>` elements as direct children.
 
 #### `<ol>`
-
 An ordered list—the order of the items is important.
 Could be alphabetical, numerical, etc.
 Can only have `<li>` elements as direct children.
 
 #### `<li>`
-
 A single list item.
 Must be inside a `<ul>` or `<ol>`.
 Can have most other elements inside it.
 
 #### `<dl>`
-
 A description list—a grouping of terms and definitions.
 Words & definitions, titles & summaries, data points, etc.
 Can only have `<dt>` and `<dd>` elements as direct children.
 
 #### `<dt>`
-
 Description title, the term of the item.
 Must come before the `<dd>`.
 
 #### `<dd>`
-
 Description definition, the data, or text of the item.
 Can be multiple `<dd>` tags underneath one `<dt>`.
 
-*Example: Description list*
 ```html
 <dl>
   <dt>Length</dt>
@@ -121,297 +322,212 @@ Can be multiple `<dd>` tags underneath one `<dt>`.
 ```
 
 
-## Text
+## Forms
 
-#### `<a href="…">`
+#### `<input>`
+`<input>` elements are used within a `<form>` element to declare input controls that allow users to input data. An input field can vary in many ways, depending on the `type` attribute.
 
-For making hyperlinks.
-href is the path to where the link should go.
+#### `<label>`
+Defines a label for an `<input>` element.
 
-#### `<h1>`
+#### `<output>`
+The `<output>` tag represents the result of a calculation (like one performed by a script).
 
-On the homepage this should be the site’s name.
-On inside pages this should be the page title.
+#### `<textarea>`
+Defines a multi-line text input.
 
-#### `<h2>, <h3>, <h4>, <h5>, <h6>`
+#### `<fieldset>`
+The `<fieldset>` tag is used to group related elements in a form under a common name. The name of the group is given by the first legend element that is a child of the `<fieldset>` element. The `<fieldset>` tag draws a box around the related elements.
 
-Content headings, each a sub-heading of the one above.
-The `<h2>` is a sub-heading of `<h1>`,` <h3>` a sub-heading of `<h2>`, etc.
+#### `<legend>`
+Defines a caption for the `<fieldset>` element.
 
-#### `<p>`
-
-A generic paragraph of text.
-
-#### `<blockquote>`
-
-A large, stand alone quote from another source.
-
-#### `<cite>`
-
-A citation for another source, often used with quotations.
-A person’s name, a URL, a book, a movie title, etc.
-
-#### `<q>`
-
-A small quotation embedded within other content.
-
-#### `<em>`
-
-A string of emphasized, slightly more important text.
-Screen readers will change their voice for this text.
-
-#### `<strong>`
-
-A string of highly emphasized, much more important text.
-Screen readers will change their voice for this text.
-
-#### `<ins datetime="…">`
-
-Content that was inserted after the document was published.
-datetime defines when it was added.
-
-#### `<del datetime="…">`
-
-Content that was deleted after the document was published.
-datetime defines when it was removed.
-
-#### `<abbr title="…">`
-
-An acronym or abbreviation, like “HTML”, “CSS”, etc.
-title contains the expanded version, like “Hypertext Markup Language”.
-
-#### `<dfn>`
-
-A definition of a term on the page.
-Should only be used once of the term.
-
-#### `<mark>`
-
-Used to highlight a piece of text for reference.
-The keywords in a search results page, the current navigation item.
-
-#### `<i>`
-
-Defines a span of text in an alternate voice or mood. A technical term, a ship name, a book title, a thought, sarcasm, another language. Terms in languages different from the main text should be annotated with lang attributes: `<i lang="fr">je ne sais quoi</i>`.
-
-#### `<b>`
-
-Defines a keyword, like product name in a review, a lead sentence in a paragraph.
-
-#### `<s>`
-
-Content that’s no longer relevant to the document.
-Consider if the `<del>` element is better suited first.
-
-#### `<u>`
-
-Labels the text as having a non-textual annotation.
-A misspelled word, a Chinese proper name, etc.
-
-#### `<small>`
-
-Represents side comments and fine print.
-
-#### `<address>`
-
-Contact information, email, tel, postal address, etc.
-
-*Example: Blockquotes*
 ```html
-<blockquote>
-  <p>Dinosaurs may be extinct from the face of the planet, but they are alive and well in our imaginations.</p>
-  <footer>— <cite>Steve Miller</cite></footer>
-</blockquote>
+<form>
+ <fieldset>
+   <legend>Personalia:</legend>
+   Name: <input type="text"><br>
+   Email: <input type="text"><br>
+   Date of birth: <input type="text">
+ </fieldset>
+</form>
 ```
 
-*Example: Addresses*
+#### `<datalist>`
+The `<datalist>` tag specifies a list of pre-defined options for an `<input>` element. The `<datalist>` tag is used to provide an autocomplete feature on `<input>` elements. Users will see a drop-down list of pre-defined options as they input data. Use the `<input>` element's `list` attribute to bind it together with a `<datalist>` element:
+
 ```html
-<address>
-  Jet Propulsion Laboratory
-  <br>4800 Oak Grove Drive
-  <br>Pasadena, California
-  <br>91109
-</address>
+<input list="browsers">
+
+<datalist id="browsers">
+ <option value="Internet Explorer">
+ <option value="Firefox">
+ <option value="Chrome">
+ <option value="Opera">
+ <option value="Safari">
+</datalist>
 ```
 
-*Example: Text Edits*
+#### `<select>`
+Used to create a drop-down list.
+
+#### `<option>`
+Defines an option in a select list.
+
+#### `<optgroup>`
+Used to group related options in a select list.
+
 ```html
-<p>Launchpad 39A owned by <del datetime="2014-04-14">NASA</del> <ins datetime="2014-04-14">SpaceX</ins></p>
-```
+<select>
+ <optgroup label="Swedish Cars">
+   <option value="volvo">Volvo</option>
+   <option value="saab">Saab</option>
+ </optgroup>
+ <optgroup label="German Cars">
+   <option value="mercedes">Mercedes</option>
+   <option value="audi">Audi</option>
+ </optgroup>
+</select>
+````
 
+## Tables
 
-## Images & media
+#### `<table>`
 
-#### `<img src="…" alt="…">`
+Defines an HTML table. An HTML table consists of the `<table>` element and one or more `<tr>`, `<th>`, and `<td>` elements. A more complex HTML table may also include `<caption>`, `<col>`, `<colgroup>`, `<thead>`, `<tfoot>`, and `<tbody>` elements.
 
-Embeds an image that’s important to the content.
-src is a path to the image file.
-alt describes the image if it cannot be seen.
+#### `<caption>`
+Defines a table caption. The `<caption>` tag must be inserted immediately after the `<table>` tag.
 
-#### `<figure>`
+#### `<colgroup>`
+Specifies a group of one or more columns in a table for formatting. The `<colgroup>` tag is useful for applying styles to entire columns, instead of repeating the styles for each cell, for each row.
 
-Embeds annotated images, illustrations, photos, code, etc.
-Could be moved out of place and would still make sense.
+Note: The `<colgroup>` tag must be a child of a `<table>` element, after any `<caption>` elements and before any `<thead>`, `<tbody>`, `<tfoot>`, and `<tr>` elements.
 
-#### `<figcaption>`
+#### `<col>`
+Specifies column properties for each column within a `<colgroup>` element. The `<col>` tag is useful for applying styles to entire columns, instead of repeating the styles for each cell, for each row.
 
-For adding a caption/annotation to the `<figure>`.
-Must be inside a `<figure>` element—cannot stand alone.
+#### `<thead>`, `<tbody>`, `<tfoot>`
+These elements are used together to specify each part of a table (body, header, footer). Browsers can use these elements to enable scrolling of the table body independently of the header and footer. Also, when printing a large table that spans multiple pages, these elements can enable the table header and footer to be printed at the top and bottom of each page. The `<tbody>` tag must be a child of a `<table>` element, and come after any `<caption>`, `<colgroup>`, and `<thead>` elements.
 
-#### `<picture>`
+#### `<tr>`, `<th>`, `<td>`
+Defines a table row `<tr>`, a header cell `<th>`, a standard data cell `<td>`
 
-Responsive image insertion—allows developers to provide different images for different contexts.
-
-#### `<video poster="…" autoplay loop muted controls>`
-
-For embedding movies into a website.
-poster is the path to an image that’s displayed before the video plays.
-autoplay will hint the video to start automatically.
-loop triggers whether the video should repeat or not.
-muted can be added to not play sound by default.
-controls shows or hides the browser’s player buttons.
-
-#### `<audio autoplay loop muted controls>`
-
-For embedding sounds into a website.
-autoplay will hint the audio to start automatically.
-loop triggers whether the audio should repeat or not.
-muted can be added to not play sound by default.
-controls shows or hides the browser’s player buttons.
-
-#### `<source>`
-
-Must be inside `<picture>`, `<video>` or `<audio>` to define the different versions of content.
-For example, in video it gives paths to the MP4 and WEBM formats.
-
-#### `<track>`
-
-Used to pair captions, chapters, etc. with `<video>` elements.
-
-*Example: Figures & captions (use only if there’s a caption)*
 ```html
-<figure>
-  <img src="images/dino-small.jpg" alt="">
-  <figcaption>So many dinosaurs I can’t even count!</figcaption>
-</figure>
+<table>
+  <caption>Monthly savings</caption>
+  <colgroup>
+    <col span="2" style="background-color:white">
+    <col style="background-color:red">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Savings</th>
+      <th>Other</th>
+    </tr>
+  </thead>
+  <tbody>
+   <tr>
+     <td>January</td>
+     <td>$100</td>
+     <td>$10</td>
+    </tr>
+    <tr>
+      <td>February</td>
+      <td>$80</td>
+      <td>$10</td
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Sum</td>
+      <td>$180</td>
+      <td>$20</td
+    </tr>
+  </tfoot>
+</table>
 ```
-
-*Example: Responsive images (see [responsive & retina images for details](https://learn-the-web.algonquindesign.ca/topics/responsive-retina-images/))*
-```html
-<picture>
-  <source media="(min-width: 60em)" srcset="images/dino-wide.jpg">
-  <source media="(min-width: 38em)" srcset="images/dino-rectangle.jpg">
-  <img src="images/dino-small.jpg" alt="All the dinosaurs!">
-</picture>
-```
-
 
 ## Data & code
 
 #### `<sub>`
-
 Defines text as being subscript.
 
 #### `<sup>`
-
 Defines text as being superscript.
 
 #### `<var>`
-
 Represents a variable in math or programming.
 
-#### `<time datetime="…">`
+#### `<time>`
+Marks some text as a time or date. The `datetime` attribute defines the machine readable version.
 
-Marks some text as a time or date.
-datetime defines the machine readable version.
-
-#### `<data value="…">`
-
-Marks elements as being a numerical piece of information.
-value provides the machine readable version.
-
-#### `<meter value="…" min="…" max="…">`
-
-Represents a single number in a range of numbers.
-value is the current number.
-min is the minimum number.
-max is the maximum number.
-
-#### `<progress value="…" min="…" max="…">`
-
-Represents the current position in a series of steps.
-value is the current position.
-min is the minimum position.
-max is the maximum position.
-
-#### `<code>`
-
-Defines a piece of text as a code sample.
-
-#### `<pre>`
-
-A piece of text that has a specific formatting, where tabs, whitespaces, etc. should be maintained.
-
-#### `<kbd>`
-
-Something a user should type into their computer.
-
-#### `<samp>`
-
-Something a user should see output from a computer.
-
-*Example: Time*
 ```html
 Apollo 11 landed on the moon <time datetime="1969-07-20T20:18">July 20, 1969</time>
 ```
 
-*Example: Data*
+#### `<data>`
+Marks elements as being a numerical piece of information. The `value` attribute provides the machine readable version.
+
 ```html
 Argentinosaurus weighted approximately <data value="90">90 tonnes</data>
 ```
 
-*Example: Maths*
-```html
-E = mc<sup>2</sup>
-```
+#### `<meter value="" min="" max="">`
+Represents a single number in a range of numbers.
+`value` is the current number.
+`min` is the minimum number.
+`max` is the maximum number.
+
+#### `<progress value="" min="" max="">`
+Represents the current position in a series of steps.
+`value` is the current position.
+`min` is the minimum position.
+`max` is the maximum position.
+
+#### `<code>`
+Defines a piece of text as a code sample.
+
+#### `<pre>`
+A piece of text that has a specific formatting, where tabs, whitespaces, etc. should be maintained.
+
+#### `<kbd>`
+Defines keyboard input; something a user should type into their computer.
+
+#### `<samp>`
+The `<samp>` tag is a phrase tag. It defines sample output from a computer program.
 
 
 ## Meaningless (non-semantic) tags
 
 #### `<div>`
-
-Inherits meaning from its children.
-Divides content into logical groups, when no other tag is better suited.
-Has restrictions on what elements it can be inside.
+Defines a division or a section in an HTML document. The`<div>` element is often used as a container for other HTML elements to style them with CSS or to perform certain tasks with JavaScript.
 
 #### `<span>`
-
-Inherits meaning from its children.
+Used to group inline-elements in a document. The `<span>` tag provides no visual change by itself but provides a way to add a hook to a part of a text.
 
 
 ## Be careful
 
 #### `<br>`
-
 Creates a line break that’s significant to the content.
 Useful in poems and addresses where the division of lines is important.
 Do not use to create space in a design—use margins and padding.
 
 #### `<hr>`
-
 Represents a thematic break in the content.
 For example, a scene change or topic change.
 Do not use to create a horizontal line—use CSS borders.
 
 #### `<button>`
-
 Represents a interactive, clickable button.
 Can be used in forms instead of `<input type="button">`. Unlike `input`, the button can wrap around other elements (`<img>` for example).
 Do not use to link to another page—use the `<a>` tag.
 
 #### `<wbr>`
-
 Presents an opportunity for the browser to add a line-break if necessary. This could be in the middle of a long word, title or sentence.
+
 
 ## Links
 
@@ -612,4 +728,7 @@ Example: `P686D23H18M14.400S`
 Opossum gestation period: <time datetime="P12D">twelve</time> to <time datetime="P13D">thirteen</time> days.
 ```
 -----
-credit: [algonquindesign.ca](https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/)
+sources:
+- [W3schools](https://www.w3schools.com/tags/)
+- [W3C](https://www.w3.org/TR/html5/)
+- [algonquindesign.ca](https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/)
