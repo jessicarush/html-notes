@@ -7,7 +7,7 @@
 - [ ] The `<html>` tag has a correct lang attribute.
 - [ ] Includes `<meta charset="utf-8">` immediately after `<head>`.
 - [ ] The `<title>` comes after `<meta charset>`.
-- [ ] The `<title>` is unique for every page—and isn’t “Untitled”.
+- [ ] The `<title>` is unique for every page—and isn’t *Untitled*.
 - [ ] Uses the meta viewport tag.
 - [ ] Uses the meta description and any other meta tags according to preference.
 - [ ] CSS files are inside the `<head>`.
