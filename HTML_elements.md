@@ -436,14 +436,14 @@ Defines a table row `<tr>`, a header cell `<th>`, a standard data cell `<td>`
     <tr>
       <td>February</td>
       <td>$80</td>
-      <td>$10</td
+      <td>$10</td>
     </tr>
   </tbody>
   <tfoot>
     <tr>
       <td>Sum</td>
       <td>$180</td>
-      <td>$20</td
+      <td>$20</td>
     </tr>
   </tfoot>
 </table>
