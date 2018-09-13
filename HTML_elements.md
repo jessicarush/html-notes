@@ -4,7 +4,7 @@
 ## Document
 
 #### `<!DOCTYPE html>`
-This declaration must be the very first thing in the HTML doc, before the `<html>` tag. Technically not an  tag; it is an instruction to the web browser about what version of HTML the page is written in.
+This declaration must be the very first thing in the HTML doc, before the `<html>` element. Technically not an element; it is an instruction to the web browser about what version of HTML the page is written in.
 
 #### `<html>`
 Tells the browser that this is an HTML document. It represents the root of the document and is the container for all other HTML elements (except for the `<!DOCTYPE>`).
@@ -13,7 +13,7 @@ Tells the browser that this is an HTML document. It represents the root of the d
 Shown in the browser tab & search results. Should be unique for every page on the site.
 
 #### `<meta>`
-The `<meta>` tag provides metadata about the HTML document. Metadata will not be displayed on the page, but will be machine parseable.
+The `<meta>` element provides metadata about the HTML document. Metadata will not be displayed on the page, but will be machine parseable.
 
 #### `<link>`
 For linking CSS and other resources. The `rel` attribute indicates the type of resource.
@@ -76,10 +76,10 @@ The section element represents a generic section of a document or application. A
 Like articles, a general rule is that the section element is appropriate only if the element’s contents would be listed explicitly in the document’s outline. Authors are encouraged to use the article element instead of the section element when the content is a complete, or self-contained, composition.
 
 #### `<aside>`
-The `<aside>` tag defines some content aside from the content it is placed in. In other words, the aside content should be related to the surrounding content. It can be used for typographical effects like pull quotes or sidebars, for advertising, for groups of nav elements, and for other content that is considered separate from the main content.
+The `<aside>` element defines some content aside from the content it is placed in. In other words, the aside content should be related to the surrounding content. It can be used for typographical effects like pull quotes or sidebars, for advertising, for groups of nav elements, and for other content that is considered separate from the main content.
 
 #### `<details>`
-The details element specifies additional information that the user can view or hide on demand. It can be used to create an interactive widget that the user can open and close. Any sort of content can be put inside the `<details>` tag. The content of a `<details>` element should not be visible unless the open attribute is set.
+The details element specifies additional information that the user can view or hide on demand. It can be used to create an interactive widget that the user can open and close. Any sort of content can be put inside the `<details>` element. The content of a `<details>` element should not be visible unless the open attribute is set.
 
 #### `<summary>`
 Defines a visible heading for the `<details>` element. The heading can be clicked to view/hide the details.
@@ -146,7 +146,7 @@ Content that was deleted after the document was published. The `datetime` attrib
 An acronym or abbreviation, like *HTML*, *CSS*, etc. The `title` attribute contains the expanded version, like “Hypertext Markup Language”.
 
 #### `<dfn>`
-Represents the defining instance of a term in HTML. The defining instance is often the first use of a term in a document. The nearest parent of the `<dfn>` tag must also contain the definition/explanation for the term inside `<dfn>`.
+Represents the defining instance of a term in HTML. The defining instance is often the first use of a term in a document. The nearest parent of the `<dfn>` element must also contain the definition/explanation for the term inside `<dfn>`.
 
 ```html
 <p><dfn>HTML</dfn> is the standard markup language for creating web pages.</p>
@@ -166,7 +166,7 @@ Defines a span of text in an alternate voice or mood. A technical term, a ship n
 Defines a span of text to which attention is being drawn for utilitarian purposes like a keyword, a product name in a review, a lead sentence in a paragraph, actionable words in interactive text-driven software. There is no implication of an alternate voice or mood with this element.
 
 #### `<s>`
-Once deprecated this element is now back to represent text that is no longer correct, accurate or relevant. Use the `<del>` tag to define replaced or deleted text.
+Once deprecated this element is now back to represent text that is no longer correct, accurate or relevant. Use the `<del>` element to define replaced or deleted text.
 
 #### `<u>`
 Represents some text that should be stylistically different from normal text, such as misspelled words or proper nouns in Chinese.  Avoid using the `<u>` element where it could be confused for a hyperlink.
@@ -214,7 +214,7 @@ For adding a caption/annotation to the `<figure>`. Must be inside a `<figure>` e
 ```
 
 #### `<picture>`
-The `<picture>` tag gives web developers more flexibility in specifying image resources. The most common use is in responsive designs. Instead of having one image that is scaled up or down based on the viewport width, multiple images can be designed to better fill the browser viewport. See [W3schools](https://www.w3schools.com/tags/tag_picture.asp).
+The `<picture>` element gives web developers more flexibility in specifying image resources. The most common use is in responsive designs. Instead of having one image that is scaled up or down based on the viewport width, multiple images can be designed to better fill the browser viewport. See [W3schools](https://www.w3schools.com/tags/tag_picture.asp).
 
 #### `<source>`
 Must be inside `<picture>`, `<video>` or `<audio>` to define the different versions of content.
@@ -257,13 +257,13 @@ Specifies text tracks for media elements (<audio> and <video>). It's used to spe
 ```
 
 #### `<iframe>`
-The `<iframe>` tag specifies an inline frame which is used to embed another HTML document within the current HTML document. Primarily used to include resources from other domains or subdomains but can be used to include content from the same domain as well. The `<iframe>`'s strength is that the embedded code is 'live' and can communicate with the parent document.
+The `<iframe>` element specifies an inline frame which is used to embed another HTML document within the current HTML document. Primarily used to include resources from other domains or subdomains but can be used to include content from the same domain as well. The `<iframe>`'s strength is that the embedded code is 'live' and can communicate with the parent document.
 
 #### `<embed>`
 The `<embed>` element defines a container for an external application or interactive content (typically non-HTML). It's used to embed content for browser plugins. Exceptions to this are SVG and HTML that are handled differently according to the standard.
 
 #### `<object>`
-The `<object>` tag defines an embedded multimedia object (like SVG animations, audio, video, Java applets, ActiveX, PDF, and Flash). You can also use the <object> tag to embed another webpage into your HTML document. You can use the <param> tag to pass parameters to plugins that have been embedded with the <object> tag.
+The `<object>` element defines an embedded multimedia object (like SVG animations, audio, video, Java applets, ActiveX, PDF, and Flash). You can also use the <object> element to embed another webpage into your HTML document. You can use the <param> element to pass parameters to plugins that have been embedded with the <object> element.
 
 > Note: `<embed>`, `<object>` and `<iframe>` are confusingly similar in functionality... plus you have the fairly new `<video>` and `<audio>`. Think/research before choosing.
 
@@ -271,16 +271,16 @@ The `<object>` tag defines an embedded multimedia object (like SVG animations, a
 Used to define parameters for plugins embedded with an `<object>` element.
 
 #### `<svg>`
-The `<svg>` tag defines a container for SVG graphics. For more information see [W3schools SVG Tutorial](https://www.w3schools.com/graphics/svg_intro.asp)
+The `<svg>` element defines a container for SVG graphics. For more information see [W3schools SVG Tutorial](https://www.w3schools.com/graphics/svg_intro.asp)
 
 
 ## Scripting
 
 #### `<template>`
-The template element is used to declare fragments of HTML that can be cloned and inserted in the document by script. The `<template>` tag holds its content hidden from the client. The content can be visible and rendered later by using JavaScript. Use the `<template>` tag when you have HTML code you want to use over and over again, but not until you ask for it.
+The template element is used to declare fragments of HTML that can be cloned and inserted in the document by script. The `<template>` element holds its content hidden from the client. The content can be visible and rendered later by using JavaScript. Use the `<template>` element when you have HTML code you want to use over and over again, but not until you ask for it.
 
 #### `<canvas>`
-The `<canvas>` tag is used to draw graphics, on the fly, via scripting (usually JavaScript). The `<canvas>` tag is only a container for graphics, you use a script to actually draw the graphics.
+The `<canvas>` element is used to draw graphics, on the fly, via scripting (usually JavaScript). The `<canvas>` element is only a container for graphics, you use a script to actually draw the graphics.
 
 
 ## Lists
@@ -310,7 +310,7 @@ Must come before the `<dd>`.
 
 #### `<dd>`
 Description definition, the data, or text of the item.
-Can be multiple `<dd>` tags underneath one `<dt>`.
+Can be multiple `<dd>` elementss underneath one `<dt>`.
 
 ```html
 <dl>
@@ -331,13 +331,13 @@ Can be multiple `<dd>` tags underneath one `<dt>`.
 Defines a label for an `<input>` element.
 
 #### `<output>`
-The `<output>` tag represents the result of a calculation (like one performed by a script).
+The `<output>` element represents the result of a calculation (like one performed by a script).
 
 #### `<textarea>`
 Defines a multi-line text input.
 
 #### `<fieldset>`
-The `<fieldset>` tag is used to group related elements in a form under a common name. The name of the group is given by the first legend element that is a child of the `<fieldset>` element. The `<fieldset>` tag draws a box around the related elements.
+The `<fieldset>` element is used to group related elements in a form under a common name. The name of the group is given by the first legend element that is a child of the `<fieldset>` element. The `<fieldset>` element draws a box around the related elements.
 
 #### `<legend>`
 Defines a caption for the `<fieldset>` element.
@@ -354,7 +354,7 @@ Defines a caption for the `<fieldset>` element.
 ```
 
 #### `<datalist>`
-The `<datalist>` tag specifies a list of pre-defined options for an `<input>` element. The `<datalist>` tag is used to provide an autocomplete feature on `<input>` elements. Users will see a drop-down list of pre-defined options as they input data. Use the `<input>` element's `list` attribute to bind it together with a `<datalist>` element:
+The `<datalist>` element specifies a list of pre-defined options for an `<input>` element. The `<datalist>` element is used to provide an autocomplete feature on `<input>` elements. Users will see a drop-down list of pre-defined options as they input data. Use the `<input>` element's `list` attribute to bind it together with a `<datalist>` element:
 
 ```html
 <input list="browsers">
@@ -397,18 +397,18 @@ Used to group related options in a select list.
 Defines an HTML table. An HTML table consists of the `<table>` element and one or more `<tr>`, `<th>`, and `<td>` elements. A more complex HTML table may also include `<caption>`, `<col>`, `<colgroup>`, `<thead>`, `<tfoot>`, and `<tbody>` elements.
 
 #### `<caption>`
-Defines a table caption. The `<caption>` tag must be inserted immediately after the `<table>` tag.
+Defines a table caption. The `<caption>` element must be inserted immediately after the `<table>` element.
 
 #### `<colgroup>`
-Specifies a group of one or more columns in a table for formatting. The `<colgroup>` tag is useful for applying styles to entire columns, instead of repeating the styles for each cell, for each row.
+Specifies a group of one or more columns in a table for formatting. The `<colgroup>` element is useful for applying styles to entire columns, instead of repeating the styles for each cell, for each row.
 
-Note: The `<colgroup>` tag must be a child of a `<table>` element, after any `<caption>` elements and before any `<thead>`, `<tbody>`, `<tfoot>`, and `<tr>` elements.
+Note: The `<colgroup>` element must be a child of a `<table>` element, after any `<caption>` elements and before any `<thead>`, `<tbody>`, `<tfoot>`, and `<tr>` elements.
 
 #### `<col>`
-Specifies column properties for each column within a `<colgroup>` element. The `<col>` tag is useful for applying styles to entire columns, instead of repeating the styles for each cell, for each row.
+Specifies column properties for each column within a `<colgroup>` element. The `<col>` element is useful for applying styles to entire columns, instead of repeating the styles for each cell, for each row.
 
 #### `<thead>`, `<tbody>`, `<tfoot>`
-These elements are used together to specify each part of a table (body, header, footer). Browsers can use these elements to enable scrolling of the table body independently of the header and footer. Also, when printing a large table that spans multiple pages, these elements can enable the table header and footer to be printed at the top and bottom of each page. The `<tbody>` tag must be a child of a `<table>` element, and come after any `<caption>`, `<colgroup>`, and `<thead>` elements.
+These elements are used together to specify each part of a table (body, header, footer). Browsers can use these elements to enable scrolling of the table body independently of the header and footer. Also, when printing a large table that spans multiple pages, these elements can enable the table header and footer to be printed at the top and bottom of each page. The `<tbody>` element must be a child of a `<table>` element, and come after any `<caption>`, `<colgroup>`, and `<thead>` elements.
 
 #### `<tr>`, `<th>`, `<td>`
 Defines a table row `<tr>`, a header cell `<th>`, a standard data cell `<td>`
@@ -496,16 +496,16 @@ A piece of text that has a specific formatting, where tabs, whitespaces, etc. sh
 Defines keyboard input; something a user should type into their computer.
 
 #### `<samp>`
-The `<samp>` tag is a phrase tag. It defines sample output from a computer program.
+The `<samp>` element is a phrase element. It defines sample output from a computer program.
 
 
-## Meaningless (non-semantic) tags
+## Meaningless (non-semantic) elements
 
 #### `<div>`
 Defines a division or a section in an HTML document. The`<div>` element is often used as a container for other HTML elements to style them with CSS or to perform certain tasks with JavaScript.
 
 #### `<span>`
-Used to group inline-elements in a document. The `<span>` tag provides no visual change by itself but provides a way to add a hook to a part of a text.
+Used to group inline-elements in a document. The `<span>` element provides no visual change by itself but provides a way to add a hook to a part of a text.
 
 
 ## Be careful
@@ -523,7 +523,7 @@ Do not use to create a horizontal line—use CSS borders.
 #### `<button>`
 Represents a interactive, clickable button.
 Can be used in forms instead of `<input type="button">`. Unlike `input`, the button can wrap around other elements (`<img>` for example).
-Do not use to link to another page—use the `<a>` tag.
+Do not use to link to another page—use the `<a>` element.
 
 #### `<wbr>`
 Presents an opportunity for the browser to add a line-break if necessary. This could be in the middle of a long word, title or sentence.
