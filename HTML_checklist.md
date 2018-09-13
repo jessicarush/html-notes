@@ -4,8 +4,8 @@
 ## Syntax
 
 - [ ] All indents use soft tabs of 2 spaces.
-- [ ] The document is indented consistently. [HTML indentation suggestions](https://learn-the-web.algonquindesign.ca/topics/html-indentation/)
-- [ ] No trailing slashes in self-closing (void) elements.
+- [ ] The document is indented consistently. See these [HTML indentation suggestions](https://learn-the-web.algonquindesign.ca/topics/html-indentation/).
+- [ ] No trailing slashes in self-closing (void) elements. For example: `<br>`, not: `<br />`.
 - [ ] Double quotes `""` are used for all attributes.
 - [ ] Attributes are ordered like:
   - class
@@ -23,14 +23,13 @@
 - [ ] Document begins with a valid DTD `<!DOCTYPE html>`.
 - [ ] The `<html>` element has a correct [lang](https://www.sitepoint.com/iso-2-letter-language-codes/) attribute, for example: `<html lang="en">`.
 - [ ] Includes `<meta charset="utf-8">` immediately after `<head>`.
-- [ ] The `<title>` comes after `<meta charset>`.
-- [ ] The `<title>` is unique for every page—and isn’t *Untitled*.
+- [ ] The `<title>` comes after `<meta charset>`, is unique for every page—and isn’t *Untitled*.
 - [ ] Uses the meta viewport element.
 - [ ] Uses the meta description and any other meta elements according to preference.
-- [ ] CSS files are inside the `<head>`.
-- [ ] JS files are either in the `<head>` and use the `async` or `defer` attribute... or directly above the closing `</body>` depending on your preference.
-- [ ] Onit the `type` attribute for style sheets and scripts.
-- [ ] Use the HTTPS protocol for embedded resources when possible, for example:
+- [ ] CSS files are linked inside the `<head>`.
+- [ ] JS files are either linked in the `<head>` and use the `async` or `defer` attribute... or directly above the closing `</body>` depending on your preference.
+- [ ] The `type` attribute is omitted for style sheets and scripts.
+- [ ] The HTTPS protocol is used for embedded resources when possible, for example:
   `<link href="https://fonts.googleapis.com...">`.
 
 ## Document
@@ -40,7 +39,7 @@
 - [ ] A `<main>` element is around the primary content.
 - [ ] A `<footer>` element is around the copyright notice.
 - [ ] Contains `<article>` and `<section>` elements where appropriate.
-- [ ] Code is commented where appropriate/needed.
+- [ ] Code is commented where appropriate and needed.
 
 ## Content
 
@@ -50,7 +49,7 @@
 - [ ] All links go somewhere. Use the [W3C link checker](http://validator.w3.org/checklink).
 - [ ] The `<figure>` isn’t used without a `<figcaption>`.
 - [ ] All email addresses and phone numbers are linked.
-- [ ] Images have been optimized and where possible, SVG is used.
+- [ ] Images have been optimized and where possible, **SVG is used**.
 - [ ] Sprite Images are used where appropriate.
 - [ ] All images contain appropriate `alt` and `title` text.
 - [ ] Tables are only used to display tabular data.
@@ -101,5 +100,6 @@ TODO: summarize the standards here.
 --------
 
 Sources:
-[HTML5 Spec](https://w3c.github.io/html/)
-[codeguide.co](http://codeguide.co/)
+[HTML5 Spec](https://w3c.github.io/html/)  
+[codeguide.co](http://codeguide.co/)  
+[algonquindesign.ca](https://learn-the-web.algonquindesign.ca/topics/html-semantics-checklist/)
