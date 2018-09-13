@@ -99,7 +99,7 @@ TODO: summarize the standards here.
 
 --------
 
-Sources:
+Sources:  
 [HTML5 Spec](https://w3c.github.io/html/)  
 [codeguide.co](http://codeguide.co/)  
 [algonquindesign.ca](https://learn-the-web.algonquindesign.ca/topics/html-semantics-checklist/)
