@@ -1,5 +1,23 @@
 # HTML Reference
 
+## Table of Contents
+
+<!-- toc -->
+
+- [Document](#document)
+- [Text](#text)
+- [Embedded Content](#embedded-content)
+- [Scripting](#scripting)
+- [Lists](#lists)
+- [Forms](#forms)
+- [Tables](#tables)
+- [Data & code](#data--code)
+- [Meaningless (non-semantic) elements](#meaningless-non-semantic-elements)
+- [Be careful](#be-careful)
+- [Links](#links)
+- [Date/time formats](#datetime-formats)
+
+<!-- tocstop -->
 
 ## Document
 
