@@ -342,6 +342,9 @@ Can be multiple `<dd>` elementss underneath one `<dt>`.
 
 ## Forms
 
+#### `<form>`
+The `<form>` element defines a form that is used to collect user input. It is used as a parent container to hold form fields.
+
 #### `<input>`
 `<input>` elements are used within a `<form>` element to declare input controls that allow users to input data. An input field can vary in many ways, depending on the `type` attribute.
 
