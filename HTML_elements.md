@@ -119,6 +119,13 @@ The dialog element represents a part of an application that a user interacts wit
 #### `<a>`
 For making hyperlinks. The `href` attribute contains the path.
 
+```html
+<a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">example</a>
+```
+The rel attribute of anchor tag specifies the relationship between the current document/web page and the linked web page/document. You can enter a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types).
+
+The `noopener` type is useful when opening untrusted links, in order to ensure they cannot tamper with the originating document via the `Window.opener` property.
+
 #### `<h1>`
 The topmost heading in a page or article. On the home page this should be the site’s name. On inside pages this should be the page title.
 
