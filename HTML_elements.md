@@ -1,4 +1,4 @@
-# HTML Reference
+# HTML Element Reference
 
 ## Table of Contents
 
@@ -353,7 +353,16 @@ Can be multiple `<dd>` elementss underneath one `<dt>`.
 The `<form>` element defines a form that is used to collect user input. It is used as a parent container to hold form fields.
 
 #### `<input>`
-`<input>` elements are used within a `<form>` element to declare input controls that allow users to input data. An input field can vary in many ways, depending on the `type` attribute.
+`<input>` elements are used within a `<form>` element to declare input controls that allow users to input data. An input field can vary in many ways, depending on the `type` attribute and various other attributes.
+
+For example:
+```html
+<!-- define an input element as a number with min, max and steps -->
+<input title="Scale of 1-10" placeholder="1-10" type="number" min="0" max="10" step="0.1" name="num_input" required>
+
+<!-- define an input as email (will validate for correct format) -->
+<input title="Enter your email" placeholder="Email Address" type="email" name="email_input" required>
+```
 
 #### `<label>`
 Defines a label for an `<input>` element.
@@ -536,7 +545,7 @@ Defines a division or a section in an HTML document. The`<div>` element is often
 Used to group inline-elements in a document. The `<span>` element provides no visual change by itself but provides a way to add a hook to a part of a text.
 
 
-## Be careful
+## Often misused elements
 
 #### `<br>`
 Creates a line break that’s significant to the content.
@@ -611,10 +620,13 @@ Pops open a new email message, start with mailto:
 <a href="mailto:hello@example.co?subject=How%20are%20you?&body=Hey%20Thomas">Thomas</a>
 ```
 
+## Attributes
 
-## Date/time formats
+See [MDN's HTML attribute reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes).
 
-Apply to the datetime="" attribute of the `<time>`, `<del>` & `<ins>` elements.
+### Datetime
+
+The following formats apply to the `datetime=""` attribute of the `<time>`, `<del>` & `<ins>` elements.
 
 #### Year
 
