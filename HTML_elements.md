@@ -43,7 +43,7 @@ Used to define style information in an HTML document. Consider attaching a style
 Used to define a client-side script (JavaScript).
 
 #### `<noscript>`
-Defines alternate content for users that have disabled scripts in their browser or have a browser that doesn't support scripts. Can be used in both <head> and <body>. When used inside the <head>: `<noscript>` must contain only `<link>`, `<style>`, and `<meta>` elements. The content inside the `<noscript>` element will be displayed if scripts are not supported, or are disabled in the user's browser.
+Defines alternate content for users that have disabled scripts in their browser or have a browser that doesn't support scripts. Can be used in both `<head>` and `<body>`. When used inside the `<head>`: `<noscript>` must contain only `<link>`, `<style>`, and `<meta>` elements. The content inside the `<noscript>` element will be displayed if scripts are not supported, or are disabled in the user's browser.
 
 #### `<body>`
 The `<body>` element contains all the contents of an HTML document.
@@ -84,12 +84,12 @@ Defines a group a navigation links.
 ```
 
 #### `<article>`
-Represents a complete, or self-contained, composition in a document, page, application, or site. This could be a news story, technical article, essay, report, a blog post, comment or other social media post. A general rule is that the article element is appropriate only if the contents would be listed explicitly in the document’s outline. Each article should be identified, typically by including a heading. An article is independent, self-contained content. It should make sense on its own and it should be possible to distribute it independently from the rest of the site.
+Represents a complete, or self-contained, composition in a document, page, application, or site. This could be a news story, technical article, essay, report, a blog post, comment or other social media post. A general rule is that the `<article>` element is appropriate only if the contents would be listed explicitly in the document’s outline. Each article should be identified, typically by including a heading. An article is independent, self-contained content. It should make sense on its own and it should be possible to distribute it independently from the rest of the site.
 
 When article elements are nested, the inner article elements represent articles that are in principle related to the contents of the outer article. For instance, a blog entry on a site could consist of summaries of other blog entries in article elements nested within the article element for the blog entry.
 
 #### `<section>`
-The section element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content. Each section should be identified, typically by including a heading. Examples of sections would be chapters, the tabbed sections in a dialog box, or the numbered sections of a thesis. A Web site’s home page could be split into sections for an introduction, news items, and contact information.
+The `<section>` element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content. Each section should be identified, typically by including a heading. Examples of sections would be chapters, the tabbed sections in a dialog box, or the numbered sections of a thesis. A Web site’s home page could be split into sections for an introduction, news items, and contact information.
 
 Like articles, a general rule is that the section element is appropriate only if the element’s contents would be listed explicitly in the document’s outline. Authors are encouraged to use the article element instead of the section element when the content is a complete, or self-contained, composition.
 
@@ -97,21 +97,21 @@ Like articles, a general rule is that the section element is appropriate only if
 The `<aside>` element defines some content aside from the content it is placed in. In other words, the aside content should be related to the surrounding content. It can be used for typographical effects like pull quotes or sidebars, for advertising, for groups of nav elements, and for other content that is considered separate from the main content.
 
 #### `<details>`
-The details element specifies additional information that the user can view or hide on demand. It can be used to create an interactive widget that the user can open and close. Any sort of content can be put inside the `<details>` element. The content of a `<details>` element should not be visible unless the open attribute is set.
+The `<details>` element specifies additional information that the user can view or hide on demand. It can be used to create an interactive widget that the user can open and close. Any sort of content can be put inside the `<details>` element. The content should not be visible unless the open attribute is set.
 
 #### `<summary>`
 Defines a visible heading for the `<details>` element. The heading can be clicked to view/hide the details.
 
 ```html
 <details>
-  <summary>Copyright 1999-2018.</summary>
-  <p> - by Example Co. All Rights Reserved.</p>
-  <p>All content and graphics on this web site are the property of Example Co.</p>
+  <summary>System Requirements...</summary>
+  <p>Requires a minimum of...</p>
+  <p>Blah blah blah, etc, an so on...</p>
 </details>
 ```
 
 #### `<dialog>`
-The dialog element represents a part of an application that a user interacts with to perform a task, for example a dialog box, inspector, or window.
+The `<dialog>` element represents a part of an application that a user interacts with to perform a task, for example a dialog box, inspector, or window.
 
 
 ## Text
@@ -122,7 +122,7 @@ For making hyperlinks. The `href` attribute contains the path.
 ```html
 <a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">example</a>
 ```
-The rel attribute of anchor tag specifies the relationship between the current document/web page and the linked web page/document. You can enter a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types).
+The `rel` attribute of anchor tag specifies the relationship between the current document/web page and the linked web page/document. You can enter a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types).
 
 The `noopener` type is useful when opening untrusted links, in order to ensure they cannot tamper with the originating document via the `Window.opener` property.
 
