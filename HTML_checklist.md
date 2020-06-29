@@ -1,8 +1,29 @@
 # HTML Checklist
 
+## Table of Contents
+
+<!-- toc -->
+
+- [Syntax](#syntax)
+- [Doctype & Head](#doctype--head)
+- [Document](#document)
+- [Links](#links)
+- [Images](#images)
+- [Contact information](#contact-information)
+- [Forms](#forms)
+- [Data](#data)
+- [Common Mistakes](#common-mistakes)
+- [Validation](#validation)
+- [Accessibility](#accessibility)
+- [Performance](#performance)
+- [Search Engine Guidelines](#search-engine-guidelines)
+- [Sources:](#sources)
+
+<!-- tocstop -->
 
 ## Syntax
 
+- [ ] Run/use an HTML linter
 - [ ] All indents use soft tabs of 2 spaces.
 - [ ] The document is indented consistently. See these [HTML indentation suggestions](https://learn-the-web.algonquindesign.ca/topics/html-indentation/).
 - [ ] No trailing slashes in self-closing (void) elements. For example: `<br>`, not: `<br />`.
@@ -31,6 +52,7 @@
 - [ ] The `type` attribute is omitted for style sheets and scripts.
 - [ ] The HTTPS protocol is used for embedded resources when possible, for example:
   `<link href="https://fonts.googleapis.com...">`.
+- [ ] Icons <https://realfavicongenerator.net/>
 
 ## Document
 
@@ -40,19 +62,28 @@
 - [ ] A `<footer>` element is around the copyright notice.
 - [ ] Contains `<article>` and `<section>` elements where appropriate.
 - [ ] Code is commented where appropriate and needed.
-
-## Content
-
 - [ ] All content has semantically appropriate elements & no content is outside of an element.
 - [ ] There’s an appropriate `<h1>` element on every page.
 - [ ] Headings are ordered properly.
+
+## Links
+
 - [ ] All links go somewhere. Use the [W3C link checker](http://validator.w3.org/checklink).
-- [ ] The `<figure>` isn’t used without a `<figcaption>`.
-- [ ] All email addresses and phone numbers are linked.
-- [ ] Images have been optimized and where possible, **SVG is used**.
-- [ ] Sprite Images are used where appropriate.
+- [ ] All links with `target="_blank"` include `rel="noopener noreferrer"`.
+
+## Images
+
+- [ ] Images have been optimized and, where possible, **SVG is used**.
+- [ ] Sprite images are used where appropriate.
 - [ ] All images contain appropriate `alt` and `title` text.
-- [ ] Tables are only used to display tabular data.
+
+## Contact information
+
+- [ ] Decide whether email addresses should be clickable or human-redable only (for example: hello at 13down dot io) and ensure this is consistent throughout
+- [ ] Decide whether phone number and address should be included, and linked.
+
+## Forms
+
 - [ ] Form elements are paired with labels using the `for` attribute *or* labels wrap their input elements.
 
 ## Data
@@ -67,6 +98,7 @@
 - [ ] The `<strong>` and `<b>` elements are not used to make text bold.
 - [ ] The `<br>` element is used only for breaks that are part of the content, as in poems or addresses.
 - [ ] The `<hr>` element is not used to make horizontal lines but a thematic change in the content.
+- [ ] Tables are only used to display tabular data.
 - [ ] Code does not contain inline or in-document styling.
 - [ ] Code does not contain deprecated elements & attributes.
 - [ ] Script blocks are externalized to .js files.
@@ -77,12 +109,14 @@
 - [ ] There’s nothing immediately inside `<ul>` & `<ol>` except `<li>` elements.
 - [ ] No `<li>` elements are outside of `<ul>` or `<ol>`.
 - [ ] No `<dt>` or `<dd>` elements are outside of a `<dl>`.
-- [ ] The `<figcaption>` isn’t outside a `<figure>`.
+- [ ] The `<figcaption>` isn’t outside a `<figure>` (and `<figure>` isn’t used without a `<figcaption>`).
 
 ## Accessibility
 
-[Web Content Accessibility Guidelines (WCAG)](<https://www.w3.org/WAI/standards-guidelines/wcag/)  
 TODO: summarize the standards here.
+
+- [Web Content Accessibility Guidelines (WCAG)](<https://www.w3.org/WAI/standards-guidelines/wcag/)  
+- [Using the aria-label attribute](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute)
 - [ ] [Run an accessibility check](http://www.cynthiasays.com/)
 
 ## Performance
@@ -93,8 +127,9 @@ TODO: summarize the standards here.
 
 ## Search Engine Guidelines
 
-[Search Engine Optimization (SEO) Starter Guide](https://support.google.com/webmasters/answer/7451184#)  
 TODO: summarize the standards here.
+
+[Search Engine Optimization (SEO) Starter Guide](https://support.google.com/webmasters/answer/7451184#)  
 
 --------
 
