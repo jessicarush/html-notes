@@ -35,7 +35,7 @@ Tells the browser that this is an HTML document. It represents the root of the d
 Shown in the browser tab & search results. Should be unique for every page on the site.
 
 **`<meta>`**  
-The `<meta>` element provides metadata about the HTML document. Metadata will not be displayed on the page, but will be machine parseable.
+The `<meta>` element provides metadata about the HTML document. Metadata will not be displayed on the page, but will be machine parse-able.
 
 **`<link>`**  
 For linking CSS and other resources. The `rel` attribute indicates the type of resource.
@@ -126,6 +126,7 @@ For making hyperlinks. The `href` attribute contains the path.
 ```html
 <a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">example</a>
 ```
+
 The `rel` attribute of anchor tag specifies the relationship between the current document/web page and the linked web page/document. You can enter a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types).
 
 The `noopener` type is useful when opening untrusted links, in order to ensure they cannot tamper with the originating document via the `Window.opener` property.
@@ -273,7 +274,7 @@ For embedding sounds into a website, for example: `<audio autoplay loop muted co
 `controls` shows or hides the browser’s player buttons.  
 
 **`<track>`**  
-Specifies text tracks for media elements (<audio> and <video>). It's used to specify subtitles, caption files or other files containing text, that should be visible when the media is playing.
+Specifies text tracks for media elements (`<audio>` and `<video>`). It's used to specify subtitles, caption files or other files containing text, that should be visible when the media is playing.
 
 ```html
 <video width="320" height="240" controls>
@@ -291,7 +292,7 @@ The `<iframe>` element specifies an inline frame which is used to embed another 
 The `<embed>` element defines a container for an external application or interactive content (typically non-HTML). It's used to embed content for browser plugins. Exceptions to this are SVG and HTML that are handled differently according to the standard.
 
 **`<object>`**  
-The `<object>` element defines an embedded multimedia object (like SVG animations, audio, video, Java applets, ActiveX, PDF, and Flash). You can also use the <object> element to embed another webpage into your HTML document. You can use the <param> element to pass parameters to plugins that have been embedded with the <object> element.
+The `<object>` element defines an embedded multimedia object (like SVG animations, audio, video, Java applets, ActiveX, PDF, and Flash). You can also use the `<object>` element to embed another webpage into your HTML document. You can use the `<param>` element to pass parameters to plugins that have been embedded with the `<object>` element.
 
 > Note: `<embed>`, `<object>` and `<iframe>` are confusingly similar in functionality... plus you have the fairly new `<video>` and `<audio>`. Think/research before choosing.
 
@@ -338,7 +339,7 @@ Must come before the `<dd>`.
 
 **`<dd>`**  
 Description definition, the data, or text of the item.
-Can be multiple `<dd>` elementss underneath one `<dt>`.
+Can be multiple `<dd>` elements underneath one `<dt>`.
 
 ```html
 <dl>
@@ -530,7 +531,7 @@ Represents the current position in a series of steps, for example: `<progress va
 Defines a piece of text as a code sample.
 
 **`<pre>`**  
-A piece of text that has a specific formatting, where tabs, whitespaces, etc. should be maintained.
+A piece of text that has a specific formatting, where tabs, white spaces, etc. should be maintained.
 
 **`<kbd>`**  
 Defines keyboard input; something a user should type into their computer.
@@ -572,11 +573,13 @@ Presents an opportunity for the browser to add a line-break if necessary. This c
 ## Links
 
 Links that go nowhere:
+
 ```html
 <a href="#">Nowhere</a>
 ```
 
 Links on the same page:
+
 ```html
 <a href="#herbivores">See the herbivores</a>
 
@@ -584,23 +587,30 @@ Links on the same page:
 ```
 
 Links to other files:
+
 ```html
 <a href="herbivores/stegosaurus.html">Stegosaurus</a>
 ```
 
 Links to other websites (always start with `https://` or less ideally `http://`):
+
 ```html
 <a href="https://www.wikipedia.org/">Wikipedia</a>
 
-<!-- Adding `rel="external"` for outward-bound sites is good -->
-<a href="https://www.wikipedia.org/" rel="external">Wikipedia</a>
+<!-- Adding `rel="noopener noreferrer"` is suggested for external links -->
+<a href="https://www.wikipedia.org/" target="_blank" rel="noopener noreferrer">
+  Wikipedia
+</a>
 ```
 
 Links to phone numbers (start with tel:, use international format):
+
 ```html
 <a href="tel:+18005551234">Call Me!</a>
 ```
+
 Send a text message with sms:
+
 ```html
 <a href="sms:+18005551234&body=Text%20me%20please">Text Me!</a>
 
@@ -609,6 +619,7 @@ Send a text message with sms:
 ```
 
 Links to email addresses:
+
 ```html
 <a href="mailto:hello@example.co">Thomas</a>
 
@@ -753,21 +764,26 @@ Example: `P686D23H18M14.400S`
 686 days, 23 hours, 18 minutes, 14 seconds, 400 milliseconds  
 
 Exact date example:
+
 ```html
 <time datetime="1963-11-23T12:16:20Z">Premiere of the most important TV show of all time!</time>
 ```
 
 Simple time period:
+
 ```html
 <time datetime="P365D6H8M">Earth’s orbital period</time>
 ```
 
 Range of time periods:
+
 ```html
 Opossum gestation period: <time datetime="P12D">twelve</time> to <time datetime="P13D">thirteen</time> days.
 ```
+
 -----
 sources:
+
 - [W3schools](https://www.w3schools.com/tags/)
 - [W3C](https://www.w3.org/TR/html5/)
 - [algonquindesign.ca](https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/)
