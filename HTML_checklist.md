@@ -115,25 +115,30 @@
 
 TODO: summarize the standards here.
 
-- [Web Content Accessibility Guidelines (WCAG)](<https://www.w3.org/WAI/standards-guidelines/wcag/)  
+- [Web Content Accessibility Guidelines (WCAG)](<https://www.w3.org/WAI/standards-guidelines/wcag/)
 - [Using the aria-label attribute](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute)
 - [ ] [Run an accessibility check](http://www.cynthiasays.com/)
+- [ ] [Accessibilty Checklist](https://www.a11yproject.com/checklist/)
 
 ## Performance
 
 - [ ] Site uses a cache buster for expiring .js, .css, and images.
-- [ ] Run a performance check: [YSlow](http://yslow.org/)  
+- [ ] Run a performance check: [YSlow](http://yslow.org/)
 - [ ] Run a performance check: [PageSpeed](https://developers.google.com/speed/pagespeed/insights/)
+
+## General
+
+- [ ] Run Lighthouse in google chrome
 
 ## Search Engine Guidelines
 
 TODO: summarize the standards here.
 
-[Search Engine Optimization (SEO) Starter Guide](https://support.google.com/webmasters/answer/7451184#)  
+[Search Engine Optimization (SEO) Starter Guide](https://support.google.com/webmasters/answer/7451184#)
 
 --------
 
-## Sources:  
-[HTML5 Spec](https://w3c.github.io/html/)  
-[codeguide.co](http://codeguide.co/)  
+## Sources:
+[HTML5 Spec](https://w3c.github.io/html/)
+[codeguide.co](http://codeguide.co/)
 [algonquindesign.ca](https://learn-the-web.algonquindesign.ca/topics/html-semantics-checklist/)
